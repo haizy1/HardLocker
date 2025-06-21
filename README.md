@@ -24,7 +24,7 @@ AppLocker configuration process.
 Several open-source tools are available to assist with AppLocker configuration and deployment, but most remain limited in scope. AaronLocker provides policy templates and
 scripts to guide rule creation, but it lacks flexibility and does not adapt to specific attack scenarios. Applocker-Hardening automates the application of static policies, without offering any real analysis or bypass detection. AppLockerGen focuses on generating XML rules through a user-friendly interface but offers no support for hardening or automation. The following table provides a benchmark comparison of the existing tools based on their ability to manage, harden, and automate AppLocker configurations.
 <p align="center">
-  <img width="400" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="450" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
 </p>
 These solutions are helpful in certain contexts, but none offer a complete framework that automates detection, hardening, rollback, and customized policy application in response to real-world AppLocker bypasses. This project aims to fill that gap by providing a tool that brings all these capabilities together in a single, adaptable solution.
 
@@ -64,7 +64,7 @@ Explore these bypasses in more detail in this document, where I explain the tech
 Here, we present the practical realization of the HardLocker tool, designed to automate the hardening of Windows systems through AppLocker. The implementation is
 based on a detailed analysis of known bypass techniques and common misconfigurations observed in enterprise environments.
 <p align="center">
-  <img width="400" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-12 003855.png">
 </p>
 
 #### Design Choices and Testing Environment :
@@ -145,7 +145,7 @@ The rollback mechanism works by storing the exported policy file in a specific f
 ##### Log Viewer :
 Every action taken by the tool is logged for transparency and troubleshooting. Logs are stored in a local file that records the date, selected options, applied rules, scan results,and any errors.
 <p align="center">
-  <img width="400" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 201915.png">
 </p>
 This feature helps users understand what changes were made, especially in environments where multiple policies might be tested. Logs are also useful during audits or when
 debugging unexpected behavior.
