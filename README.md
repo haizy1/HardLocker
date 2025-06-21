@@ -64,7 +64,7 @@ Explore these bypasses in more detail in this document, where I explain the tech
 Here, we present the practical realization of the HardLocker tool, designed to automate the hardening of Windows systems through AppLocker. The implementation is
 based on a detailed analysis of known bypass techniques and common misconfigurations observed in enterprise environments.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
 </p>
 
 #### Design Choices and Testing Environment :
@@ -73,48 +73,48 @@ All testing and validation were carried out on a Windows 10 Professional virtual
 #### HardLocker main features :
 The main menu is the central point of interaction between the user and the HardLocker tool. It is designed to be simple and easy to navigate, using a clear text-based interface built with PowerShell.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 194800.png">
 </p>
 
 ##### Profile Selection Module :
 The tool offers three predefined profiles to match different levels of security:
 
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 194950.png">
 </p>
 
 • **Basic**: For users who want to improve security without affecting normal usage. The rules in this profile are selected carefully to avoid blocking legitimate apps.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 195054.png">
 </p>
 As shown in the image above, after selecting the Basic profile and the enforcement mode, the tool automatically backs up the current policy, applies the selected rules,
 refreshes the AppLocker interface, and redirects the user to the main menu to continue.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 195129.png">
 </p>
 
 • **Hardened** : Provides stronger protection, targeting more aggressive attack techniques. It is suitable for sensitive environments where maximum security is required. Applied the same way as the basic profile.
 • **Custom** : Allows the user to select specific rules manually. This profile is ideal for experienced users who know their environment and want more control.
 
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 195931.png">
 </p>
 
 With the Custom profile, the user selects specific rules from a list, then chooses the enforcement mode. The tool backs up the current policy, applies the selected rules, and saves them in a custom policy file.
 
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 200058.png">
 </p>
 and the AppLocker interface is refreshed once the rules are applied.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 200132.png">
 </p>
 Technically, the rules for each profile are stored in XML format inside the script. When the user selects a profile, the corresponding XML is parsed and applied using built-in PowerShell cmdlets like Set-AppLockerPolicy. A unique ID is assigned to each rule to avoid conflicts or duplication.
 
 ##### Weakness Detection :
 Before applying any profile, the tool offers a scan feature to detect potential security weaknesses.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 200316.png">
 </p>
 This scan checks several common issues, including:
 • Absence of AppLocker rules in key categories (e.g., executable, script, DLL).
@@ -127,25 +127,25 @@ whether to apply a full profile or customize their own.
 To give users more control, the tool includes a feature that allows exporting the current AppLocker policy. This is done using the Get-AppLockerPolicy cmdlet, which outputs
 the policy in XML format.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 200337.png">
 </p>
 The exported file can be saved for backup, shared with other systems, or reviewed manually. This feature is useful for documentation, auditing, or reapplying policies in the future.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 200355.png">
 </p>
 
 ##### Rollback Feature :
 To avoid accidental misconfigurations, the tool automatically saves a backup of the current AppLocker policy before applying any changes. This backup can be restored later
 using the rollback function.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-11 200549.png">
 </p>
 The rollback mechanism works by storing the exported policy file in a specific folder and reimporting it when the user selects the rollback option. This provides a safety net and allows users to experiment with profiles without risk.
 
 ##### Log Viewer :
 Every action taken by the tool is logged for transparency and troubleshooting. Logs are stored in a local file that records the date, selected options, applied rules, scan results,and any errors.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
 </p>
 This feature helps users understand what changes were made, especially in environments where multiple policies might be tested. Logs are also useful during audits or when
 debugging unexpected behavior.
@@ -156,14 +156,14 @@ Two validations were captured :
 **AppLocker Event Log (Event ID 8004) :**
 The Windows Event Viewer showed that the binary InstallUtil.exe was prevented from running under the AppLocker EXE and DLL policy.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-15 120945.png">
 </p>
 
 
 **System Notification** :
 A system-level popup confirmed that the application was blocked by the system administrator, reinforcing that the rule was correctly enforced.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-15 120831.png">
 </p>
 These results confirm that the AppLocker hardening profile was successfully applied, and unauthorized applications were effectively restricted as designed.
 
