@@ -57,7 +57,7 @@ In some cases, AppLocker can be bypassed through exploitation of user-writable f
 in C:\Windows\System32\AppLocker : AppCache.dat, AppCache.dat.LOG1, and AppCache.dat.LOG2. These files are writable by the first user who logs into the system after AppLocker has been deployed. Although they are not executables themselves, their write permissions can be abused as part of a broader evasion strategy, allowing an attacker
 to plant or manipulate data in a location that is typically trusted by default AppLocker rules. This scenario highlights a subtle but impactful misconfiguration, where trusted paths intersect with insecure permissions.
 
-Explore these bypasses in more detail in this [**document**],(the Generic bypasses and the famous ones.pdf) where I explain the techniques and also provide suggestions on how to remediate them using AppLocker rules. 
+Explore these bypasses in more detail in this [**document**](the_Generic_bypasses_and_the_famous_ones.pdf) where I explain the techniques and also provide suggestions on how to remediate them using AppLocker rules. 
 
 
 ### Implementation of the solution
