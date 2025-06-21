@@ -29,6 +29,9 @@ scripts to guide rule creation, but it lacks flexibility and does not adapt to s
 These solutions are helpful in certain contexts, but none offer a complete framework that automates detection, hardening, rollback, and customized policy application in response to real-world AppLocker bypasses. This project aims to fill that gap by providing a tool that brings all these capabilities together in a single, adaptable solution.
 
 ### Known AppLocker Bypass Techniques Remediated by HardLocker
+<p align="center">
+  <img width="450" height="258" src="images/Capture d'écran 2025-06-22 010136.png">
+</p>
 #### LOLBAS Abuse :
 Living Off The Land Binaries, Scripts and Libraries refer to legitimate, pre-installed Windows utilities that can be repurposed by attackers to execute malicious payloads while avoiding detection. Since these tools are signed by Microsoft and often whitelisted by default, they provide an effective method for bypassing application control mechanisms such as AppLocker. Attackers frequently exploit binaries like mshta.exe, msbuild.exe, regsvr32.exe, and cmstp.exe to run unauthorized code without triggering security alerts. This technique allows adversaries to operate covertly using trusted system components.
 I've tested [**InstallUtil.exe**](InstallUtil.exe.pdf) and [**MSBuild.exe**](Msbuild.exe.pdf) to reproduce them. I invite you to read those two files, as they explain the steps in detail. 
