@@ -171,4 +171,4 @@ These results confirm that the AppLocker hardening profile was successfully appl
 The tool was conceived as a bridge between offensive knowledge and defensive solutions ,using the logic of how attacks are conducted to proactively block them. This dual vision allowed us to reinforce not only our technical skills in Windows internals and PowerShell automation, but also to explore how security tools can be made scalable, auditable, and usable in real environments.
 
 
-Finally, I invite you to read my full report, where I provide a detailed analysis of the bypass techniques and how HardLocker addresses them.
+Finally, I invite you to read my full [**report**](Rapport_PFE_LMPS-final-versionn.pdf), where I provide a detailed analysis of the bypass techniques and how HardLocker addresses them.
