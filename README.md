@@ -168,4 +168,7 @@ A system-level popup confirmed that the application was blocked by the system ad
 These results confirm that the AppLocker hardening profile was successfully applied, and unauthorized applications were effectively restricted as designed.
 
 ### Conclusion :
-he tool was conceived as a bridge between offensive knowledge and defensive solutions ,using the logic of how attacks are conducted to proactively block them. This dual vision allowed us to reinforce not only our technical skills in Windows internals and PowerShell automation, but also to explore how security tools can be made scalable, auditable, and usable in real environments.
+The tool was conceived as a bridge between offensive knowledge and defensive solutions ,using the logic of how attacks are conducted to proactively block them. This dual vision allowed us to reinforce not only our technical skills in Windows internals and PowerShell automation, but also to explore how security tools can be made scalable, auditable, and usable in real environments.
+
+
+Finally, I invite you to read my full report, where I provide a detailed analysis of the bypass techniques and how HardLocker addresses them.
