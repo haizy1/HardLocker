@@ -31,7 +31,7 @@ These solutions are helpful in certain contexts, but none offer a complete frame
 ### Known AppLocker Bypass Techniques Remediated by HardLocker
 #### LOLBAS Abuse :
 Living Off The Land Binaries, Scripts and Libraries refer to legitimate, pre-installed Windows utilities that can be repurposed by attackers to execute malicious payloads while avoiding detection. Since these tools are signed by Microsoft and often whitelisted by default, they provide an effective method for bypassing application control mechanisms such as AppLocker. Attackers frequently exploit binaries like mshta.exe, msbuild.exe, regsvr32.exe, and cmstp.exe to run unauthorized code without triggering security alerts. This technique allows adversaries to operate covertly using trusted system components.
-I've tested InstallUtil.exe and MSBuild.exe to reproduce them. I invite you to read those two files, as they explain the steps in detail. InstallUtil.exe.pdf
+I've tested [**InstallUtil.exe**](InstallUtil.exe.pdf) and [**MSBuild.exe**](Msbuild.exe.pdf) to reproduce them. I invite you to read those two files, as they explain the steps in detail. 
 #### Writable Paths and Misconfiguration :
 AppLocker enforces policies based on file locations, but its effectiveness can be undermined by improper directory permissions. Many paths, including %TEMP%, %APPDATA%,
 and C:\Windows\Tasks\, are writable by non-privileged users. Attackers take advantage of these directories to drop and execute malicious files within otherwise trusted
@@ -57,8 +57,8 @@ In some cases, AppLocker can be bypassed through exploitation of user-writable f
 in C:\Windows\System32\AppLocker : AppCache.dat, AppCache.dat.LOG1, and AppCache.dat.LOG2. These files are writable by the first user who logs into the system after AppLocker has been deployed. Although they are not executables themselves, their write permissions can be abused as part of a broader evasion strategy, allowing an attacker
 to plant or manipulate data in a location that is typically trusted by default AppLocker rules. This scenario highlights a subtle but impactful misconfiguration, where trusted paths intersect with insecure permissions.
 
-Explore these bypasses in more detail in this document, where I explain the techniques and also provide suggestions on how to remediate them using AppLocker rules. 
-------------- here the file--------------------------
+Explore these bypasses in more detail in this [**document**],(the_Generic_bypasses_and_the_famous_ones.pdf) where I explain the techniques and also provide suggestions on how to remediate them using AppLocker rules. 
+
 
 ### Implementation of the solution
 Here, we present the practical realization of the HardLocker tool, designed to automate the hardening of Windows systems through AppLocker. The implementation is
