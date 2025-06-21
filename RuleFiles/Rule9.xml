@@ -1,0 +1,12 @@
+<!-- Block Unsigned PowerShell Scripts -->
+<!-- Rule9 : script -->
+    <FilePathRule Id="00000000-0000-0000-0000-000000000246" Name="Launch-VsDevShell.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\Launch-VsDevShell.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000249" Name="Launch-VsDevShell.ps1 second path" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\Launch-VsDevShell.ps1" />
+      </Conditions>
+    </FilePathRule>

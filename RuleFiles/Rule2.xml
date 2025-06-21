@@ -1,0 +1,177 @@
+    <!-- Prevent Alternate Data Stream (ADS) Exploits  -->
+    <!-- Rule2 : exe,script,msi,appx,dll -->
+    <FilePathRule Id="00000000-0000-0000-0000-000000000002" Name="Block Tasks ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Tasks:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000004" Name="Block Tracing ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Tracing:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000006" Name="Block Servicing Sessions ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\servicing\Sessions:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000008" Name="Block CRMLog ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Registration\CRMLog:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000010" Name="Block Dlna DeviceIcon ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcon:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000012" Name="Block MachineKeys ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Microsoft\Crypto\RSA\MachineKeys:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000014" Name="Block SysWOW64 FxsTmp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\FxsTmp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000016" Name="Block SysWOW64 Tasks ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\Tasks:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000018" Name="Block SysWOW64 com dmp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\com\dmp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000020" Name="Block OpsMgrTrace ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Logs\OpsMgrTrace:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000022" Name="Block Servicing Packages ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\servicing\Packages:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000024" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000026" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000028" Name="Block FxsTmp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\FxsTmp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000030" Name="Block System32 Tasks ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Tasks:*" />
+      </Conditions>
+    </FilePathRule>
+     <FilePathRule Id="00000000-0000-0000-0000-000000000032" Name="Block System32 com dmp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\com\dmp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000034" Name="Block DriverData ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Drivers\DriverData:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000036" Name="Block Printers ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\spool\PRINTERS:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000038" Name="Block Servers ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\spool\SERVERS:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000040" Name="Block Color Drivers ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\spool\drivers\color:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000042" Name="Block SyncCenter ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Tasks\Microsoft\Windows\SyncCenter:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000044" Name="Block SysWOW64 SyncCenter ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\Tasks\Microsoft\Windows\SyncCenter:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000046" Name="Block SysWOW64 PLA System ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\Tasks\Microsoft\Windows\PLA\System:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000048" Name="Block C logs ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\logs:*" />
+      </Conditions>
+    </FilePathRule>
+     <FilePathRule Id="00000000-0000-0000-0000-000000000050" Name="Block User Downloads ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads:*" />
+      </Conditions>
+    </FilePathRule>
+     <FilePathRule Id="00000000-0000-0000-0000-000000000052" Name="Block AppLocker ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\AppLocker:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000054" Name="Block WIA debug ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\debug\WIA:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000056" Name="Block Event Logs ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\winevt\Logs:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000058" Name="Block CCM Logs ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ccm\logs:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000060" Name="Block AppVTempData ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ccm\systemtemp\appvtempdata\appvcommandoutput:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000062" Name="Block NoIDMIFs ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ccm\inventory\noidmifs:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000066" Name="Block Catroot2 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\catroot2\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000068" Name="Mitigating VSTO Add-ins Risks 1 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000070" Name="Mitigating VSTO Add-ins Risks 2 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000072" Name="Mitigating VSTO Add-ins Risks 3 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>

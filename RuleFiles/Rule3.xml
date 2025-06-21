@@ -1,0 +1,32 @@
+    <!-- Block Known User-Writable Dangerous Paths -->
+    <!-- Rule3 : exe,script,msi,appx,dll -->
+    <FilePathRule Id="00000000-0000-0000-0000-000000000047" Name="Block C logs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\logs\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000049" Name="Block User Downloads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000051" Name="Block AppLocker" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\AppLocker\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000067" Name="Mitigating VSTO Add-ins Risks 1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000069" Name="Mitigating VSTO Add-ins Risks 2" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000071" Name="Mitigating VSTO Add-ins Risks 3" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>

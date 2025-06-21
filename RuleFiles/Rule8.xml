@@ -1,0 +1,27 @@
+    <!-- Block DLL hijack paths  -->
+    <!-- Rule8 : dll -->
+    <FilePathRule Id="00000000-0000-0000-0000-000000000480" Name="Block .dll in temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%TEMP%\*.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000481" Name="Block webclnt.dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\webclnt.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000482" Name="Block .dll in appdata" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%APPDATA%\*.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000483" Name="Block .dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Users\*\AppData\Local\Temp\*.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000484" Name="Block .dll in ProgramData" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\ProgramData\*.dll" />
+      </Conditions>
+    </FilePathRule>

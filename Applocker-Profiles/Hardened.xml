@@ -1,0 +1,1380 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AppLockerPolicy Version="1">
+<RuleCollection Type="Exe" EnforcementMode="AuditOnly">
+    <FilePathRule Id="00000000-0000-0000-0000-000000000023" Name="Block Temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000024" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000049" Name="Block User Downloads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000050" Name="Block User Downloads ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000063" Name="Block bash.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\bash.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000064" Name="Block runscripthelper.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\runscripthelper.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000067" Name="Mitigating VSTO Add-ins Risks 1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000068" Name="Mitigating VSTO Add-ins Risks 1 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000069" Name="Mitigating VSTO Add-ins Risks 2" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000070" Name="Mitigating VSTO Add-ins Risks 2 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000071" Name="Mitigating VSTO Add-ins Risks 3" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000072" Name="Mitigating VSTO Add-ins Risks 3 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000073" Name="Block addinprocess.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\addinprocess.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000074" Name="Block addinprocess32.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\addinprocess32.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000075" Name="Block addinutil.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\addinutil.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000076" Name="Block aspnet_compiler.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\aspnet_compiler.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000077" Name="Block AtBroker.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\AtBroker.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000078" Name="Block bash.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\bash.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000079" Name="Block bginfo.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\bginfo.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000080" Name="Block cdb.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\cdb.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000081" Name="Block cmstp.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\cmstp.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000082" Name="Block control.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\control.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000083" Name="Block cscript.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\cscript.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000084" Name="Block csi.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\csi.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000085" Name="Block dbghost.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\dbghost.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000086" Name="Block dbgsvc.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\dbgsvc.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000087" Name="Block dbgsrv.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\dbgsrv.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000088" Name="Block dfsvc.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\dfsvc.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000089" Name="Block dnx.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\dnx.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000090" Name="Block dotnet.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\dotnet.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000091" Name="Block forfiles.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\forfiles.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000092" Name="Block fsi.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\fsi.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000093" Name="Block fsiAnyCpu.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\fsiAnyCpu.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000094" Name="Block ie4unit.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\ie4unit.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000095" Name="Block ieexec.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\ieexec.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000096" Name="Block infdefaultinstall.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\infdefaultinstall.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000097" Name="Block kd.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\kd.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000098" Name="Block kill.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\kill.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000099" Name="Block lxrun.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\lxrun.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000100" Name="Block mavinject.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\mavinject.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000101" Name="Block manage-bde.wsf" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\manage-bde.wsf" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000102" Name="Block Microsoft.Workflow.Compiler.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\Microsoft.Workflow.Compiler.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000104" Name="Block msdeploy.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\msdeploy.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000105" Name="Block msdt.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\msdt.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000107" Name="Block msiexec.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\msiexec.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000108" Name="Block msxsl.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\msxsl.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000109" Name="Block ntkd.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\ntkd.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000110" Name="Block ntsd.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\ntsd.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000111" Name="Block odbcconf.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\odbcconf.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000112" Name="Block powershellcustomhost.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\powershellcustomhost.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000113" Name="Block rcsi.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\rcsi.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000114" Name="Block regsvr32.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\regsvr32.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000115" Name="Block rsi.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\rsi.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000116" Name="Block rundll32.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\rundll32.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000117" Name="Block runscripthelper.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\runscripthelper.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000118" Name="Block syncappvpublishingserver.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\syncappvpublishingserver.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000119" Name="Block te.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\te.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000120" Name="Block texttransform.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\texttransform.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000121" Name="Block tracker.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\tracker.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000122" Name="Block visualuiaverifynative.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\visualuiaverifynative.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000123" Name="Block wfc.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\wfc.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000124" Name="Block windbg.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\windbg.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000125" Name="Block winword.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\winword.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000126" Name="Block wmic.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\wmic.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000127" Name="Block wscript.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\wscript.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000128" Name="Block wsl.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\wsl.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000129" Name="Block wslconfig.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\wslconfig.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000130" Name="Block wslhost.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions> 
+        <FilePathCondition Path="%WINDIR%\*\wslhost.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000131" Name="Block xwizard.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\xwizard.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000133" Name="Block MSDT.EXE (Troubleshooting Packs)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="MSDT.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000134" Name="Block KD.EXE  (Debuggers)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="KD.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000135" Name="Block NTSD.EXE  (Debuggers)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="NTSD.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000136" Name="Block BGINFO.EXE (Version 4.22 and below)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="BGINFO" BinaryName="BGINFO.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="4.22.0.0" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000138" Name="Block MSXSL.EXE (COMMAND LINE XSLT)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="COMMAND LINE XSLT" BinaryName="MSXSL.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000139" Name="Block CMSTP.EXE (CONNECTION MANAGER)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT(R) CONNECTION MANAGER" BinaryName="CMSTP.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000140" Name="Block ODBCCONF.EXE (MDAC Utility)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="ODBCCONF.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000141" Name="Block SYNCAPPVPUBLISHINGSERVER.EXE" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT (R) WINDOWS (R) OPERATING SYSTEM" BinaryName="SYNCAPPVPUBLISHINGSERVER.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000142" Name="Block FSI.EXE (SDK Utility)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® F#" BinaryName="FSI.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>  
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000143" Name="Block MAVINJECT32.EXE (APPLICATION VIRTUALIZATION)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT APPLICATION VIRTUALIZATION (APP-V)" BinaryName="MAVINJECT32.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000144" Name="Block FORFILES.EXE (WINDOWS)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="FORFILES.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000145" Name="Block ATBROKER.EXE (WINDOWS)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="ATBROKER.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000146" Name="Block BASH.EXE (WINDOWS)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="BASH.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000147" Name="Block CSI.EXE (.NET Utilities)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="" BinaryName="CSI.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000148" Name="Block DFSVC.EXE (.NET Utilities)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® .NET FRAMEWORK" BinaryName="DFSVC.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000149" Name="Block IEEXEC.EXE (.NET Utilities)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® .NET FRAMEWORK" BinaryName="IEEXEC.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000154" Name="Block FSIANYCPU.EXE (SDK Utility)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® F#" BinaryName="FSIANYCPU.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000155" Name="Block WMIC.EXE (WMI)" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="WMIC.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000156" Name="ODBCCONF.EXE, i MICROSOFT® WINDOWS® OPERATING SYSTEM, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="ODBCCONF.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000157" Name="CDB.EXE, i MICROSOFT® WINDOWS® OPERATING SYSTEM, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="CDB.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000158" Name="RUNDLL32.EXE, i MICROSOFT® WINDOWS® OPERATING SYSTEM, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="RUNDLL32.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000159" Name="MAVINJECT64.EXE, i MICROSOFT® WINDOWS® OPERATING SYSTEM, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="MAVINJECT64.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000160" Name="WINDBG.EXE, i MICROSOFT® WINDOWS® OPERATING SYSTEM, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="WINDBG.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000161" Name="TRACKER.EXE, in MICROSOFT® BUILD TOOLS®, from O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® BUILD TOOLS®" BinaryName="TRACKER.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000162" Name="INFDEFAULTINSTALL.EXE, in MICROSOFT® WINDOWS® OPERATING SYSTEM, from O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="INFDEFAULTINSTALL.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000163" Name="ADDINPROCESS32.EXE, i MICROSOFT® .NET FRAMEWORK, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® .NET FRAMEWORK" BinaryName="ADDINPROCESS32.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000164" Name="XWIZARD.EXE, i MICROSOFT® WINDOWS® OPERATING SYSTEM, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="XWIZARD.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000165" Name="ADDINPROCESS.EXE, i MICROSOFT® .NET FRAMEWORK, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® .NET FRAMEWORK" BinaryName="ADDINPROCESS.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000166" Name="DBGSVC.EXE, in DEBUG DIAGNOSTIC TOOL, from O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="DEBUG DIAGNOSTIC TOOL" BinaryName="DBGSVC.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000167" Name="DBGHOST.EXE, in DEBUG DIAGNOSTIC TOOL, from O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="DEBUG DIAGNOSTIC TOOL" BinaryName="DBGHOST.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000168" Name="MAVINJECT32.EXE, i MICROSOFT® WINDOWS® OPERATING SYSTEM, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="MAVINJECT32.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000169" Name="REGSVR32.EXE, i MICROSOFT® WINDOWS® OPERATING SYSTEM, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="REGSVR32.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000170" Name="ADDINUTIL.EXE, i MICROSOFT® .NET FRAMEWORK, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® .NET FRAMEWORK" BinaryName="ADDINUTIL.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+      <FilePublisherRule Id="00000000-0000-0000-0000-000000000171" Name="NTKD.EXE, i MICROSOFT® WINDOWS® OPERATING SYSTEM, fra O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+        <Conditions>
+          <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="NTKD.EXE">
+            <BinaryVersionRange LowSection="*" HighSection="*" />
+          </FilePublisherCondition>
+        </Conditions>
+      </FilePublisherRule>
+</RuleCollection>
+<RuleCollection Type="Script" EnforcementMode="AuditOnly">
+    <FilePathRule Id="00000000-0000-0000-0000-000000000194" Name="Block Temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000195" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+   <FilePathRule Id="00000000-0000-0000-0000-000000000196" Name="Block Temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000197" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000220" Name="Block User Downloads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000221" Name="Block User Downloads ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000236" Name="Mitigating VSTO Add-ins Risks 1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000237" Name="Mitigating VSTO Add-ins Risks 1 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000238" Name="Mitigating VSTO Add-ins Risks 2" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000239" Name="Mitigating VSTO Add-ins Risks 2 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000240" Name="Mitigating VSTO Add-ins Risks 3" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000241" Name="Mitigating VSTO Add-ins Risks 3 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000242" Name="Block pubprn.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\pubprn.vbs" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000243" Name="Block slmgr.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\slmgr.vbs" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000244" Name="Block winrm.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\winrm.vbs" />
+      </Conditions>
+    </FilePathRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000257" Name="Proxy execution with Pubprn.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="" BinaryName="">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000258" Name="slmgr.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="" BinaryName="">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000259" Name="winrm.vbs SysWOW64" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="" BinaryName="">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000260" Name="winrm.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="" BinaryName="">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000261" Name="Pubprn.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="" BinaryName="">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000262" Name="autorisation pour les scripts signés ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="" BinaryName="">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000263" Name="slmgr.vbs SysWOW64" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="" BinaryName="">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000246" Name="Launch-VsDevShell.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\Launch-VsDevShell.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000247" Name="*PEInjection*.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="*PEInjection*.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000248" Name="*Reflective*.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="*Reflective*.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000249" Name="Launch-VsDevShell.ps1 second path" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\Launch-VsDevShell.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000250" Name="CL_Invocation.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Windows\diagnostics\system\AERO\CL_Invocation.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000252" Name="CL_LoadAssembly.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Windows\diagnostics\system\Audio\CL_LoadAssembly.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000253" Name="Proxy execution with CL_Mutexverifiers.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Windows\diagnostics\system\AERO\CL_Mutexverifiers.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000255" Name="UtilityFunctions.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Windows\diagnostics\system\Networking\UtilityFunctions.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FileHashRule Id="00000000-0000-0000-0000-000000000256" Name="Invoke-ReflectivePEInjection.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0xF3C0288998194F41986572E0C0CE9724AE29B45165F01887AE825B45A9880CE3" SourceFileName="Invoke-ReflectivePEInjection.ps1" SourceFileLength="151863" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+</RuleCollection>
+<RuleCollection Type="Appx" EnforcementMode="AuditOnly">
+    <FilePathRule Id="0541A41A-5678-495E-9DDE-8B81FD01F313" Name="Block Temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="9A663E4C-1D28-42C4-B7EB-F3667EEF2C71" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+   <FilePathRule Id="00000000-0000-0000-0000-000000000025" Name="Block Temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000026" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="1A57BDC3-4645-481B-8D92-37B5EDBE8B75" Name="Block User Downloads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="11630E55-AF82-473E-88E9-E394DB4CB75B" Name="Block User Downloads ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="97FDCEC8-6D9A-4219-B7D2-E3B95C01A64B" Name="Mitigating VSTO Add-ins Risks 1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="BDBBC086-6BCF-4451-A6E0-B9BD5ACB5B24" Name="Mitigating VSTO Add-ins Risks 1 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="5D69EC95-E150-47AA-A6E2-3023292AE528" Name="Mitigating VSTO Add-ins Risks 2" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="4EB4599F-8F60-4F74-B347-2CD9014702B5" Name="Mitigating VSTO Add-ins Risks 2 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="6AD017E2-703E-4386-8802-48D3649CB59F" Name="Mitigating VSTO Add-ins Risks 3" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="0BA7C570-4D6A-4EA3-A323-A2B3D1ED280A" Name="Mitigating VSTO Add-ins Risks 3 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+</RuleCollection>
+<RuleCollection Type="Msi" EnforcementMode="AuditOnly">
+    <FilePublisherRule Id="00000000-0000-0000-0000-000000000334" Name="(Default Rule) All signed packaged apps" Description="Allows members of the Everyone group to run packaged apps that are signed." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="*" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000264" Name="Block Tasks" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Tasks\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000265" Name="Block Tasks ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Tasks:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000266" Name="Block Tracing" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Tracing\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000267" Name="Block Tracing ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Tracing\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000268" Name="Block Servicing Sessions" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\servicing\Sessions\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000269" Name="Block Servicing Sessions ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\servicing\Sessions:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000270" Name="Block CRMLog" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Registration\CRMLog\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000271" Name="Block CRMLog ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Registration\CRMLog:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000272" Name="Block Dlna DeviceIcon" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcon\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000273" Name="Block Dlna DeviceIcon ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcon:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000274" Name="Block MachineKeys" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Microsoft\Crypto\RSA\MachineKeys\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000275" Name="Block MachineKeys ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Microsoft\Crypto\RSA\MachineKeys:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000276" Name="Block SysWOW64 FxsTmp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\FxsTmp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000277" Name="Block SysWOW64 FxsTmp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\FxsTmp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000278" Name="Block SysWOW64 Tasks" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\Tasks\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000279" Name="Block SysWOW64 Tasks ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\Tasks:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000280" Name="Block SysWOW64 com dmp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\com\dmp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000281" Name="Block SysWOW64 com dmp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\com\dmp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000282" Name="Block OpsMgrTrace" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Logs\OpsMgrTrace\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000283" Name="Block OpsMgrTrace ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Logs\OpsMgrTrace:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000284" Name="Block Servicing Packages" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\servicing\Packages\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000285" Name="Block Servicing Packages ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\servicing\Packages:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000286" Name="Block Temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000287" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+   <FilePathRule Id="00000000-0000-0000-0000-000000000288" Name="Block Temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000289" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000290" Name="Block FxsTmp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\FxsTmp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000291" Name="Block FxsTmp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\FxsTmp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000292" Name="Block System32 Tasks" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Tasks\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000293" Name="Block System32 Tasks ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Tasks:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000294" Name="Block System32 com dmp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\com\dmp\*" />
+      </Conditions>
+    </FilePathRule>
+     <FilePathRule Id="00000000-0000-0000-0000-000000000295" Name="Block System32 com dmp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\com\dmp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000296" Name="Block DriverData" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Drivers\DriverData\*" />
+      </Conditions>
+    </FilePathRule>
+     <FilePathRule Id="00000000-0000-0000-0000-000000000297" Name="Block DriverData ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Drivers\DriverData:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000298" Name="Block Printers" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\spool\PRINTERS\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000299" Name="Block Printers ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\spool\PRINTERS:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000300" Name="Block Servers" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\spool\SERVERS\*" />
+      </Conditions>
+    </FilePathRule>
+     <FilePathRule Id="00000000-0000-0000-0000-000000000301" Name="Block Servers ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\spool\SERVERS:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000302" Name="Block Color Drivers" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\spool\drivers\color\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000303" Name="Block Color Drivers ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\spool\drivers\color:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000304" Name="Block SyncCenter" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Tasks\Microsoft\Windows\SyncCenter\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000305" Name="Block SyncCenter ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\Tasks\Microsoft\Windows\SyncCenter:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000306" Name="Block SysWOW64 SyncCenter" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\Tasks\Microsoft\Windows\SyncCenter\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000307" Name="Block SysWOW64 SyncCenter ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\Tasks\Microsoft\Windows\SyncCenter:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000308" Name="Block SysWOW64 PLA System" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\Tasks\Microsoft\Windows\PLA\System\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000309" Name="Block SysWOW64 PLA System ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\SysWOW64\Tasks\Microsoft\Windows\PLA\System:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000310" Name="Block C logs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\logs\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000311" Name="Block C logs ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\logs:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000312" Name="Block User Downloads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000313" Name="Block User Downloads ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000314" Name="Block AppLocker" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\AppLocker\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000315" Name="Block AppLocker ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\AppLocker:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000316" Name="Block WIA debug" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\debug\WIA\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000317" Name="Block WIA debug ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\debug\WIA:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000318" Name="Block Event Logs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\winevt\Logs\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000319" Name="Block Event Logs ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\winevt\Logs:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000320" Name="Block CCM Logs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ccm\logs\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000321" Name="Block CCM Logs ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ccm\logs:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000322" Name="Block AppVTempData" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ccm\systemtemp\appvtempdata\appvcommandoutput\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000323" Name="Block AppVTempData ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ccm\systemtemp\appvtempdata\appvcommandoutput:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000324" Name="Block NoIDMIFs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ccm\inventory\noidmifs\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000325" Name="Block NoIDMIFs ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\ccm\inventory\noidmifs:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000326" Name="Block Catroot2" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\catroot2\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000327" Name="Block Catroot2 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%SYSTEM32%\catroot2\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000328" Name="Mitigating VSTO Add-ins Risks 1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000329" Name="Mitigating VSTO Add-ins Risks 1 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000330" Name="Mitigating VSTO Add-ins Risks 2" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000331" Name="Mitigating VSTO Add-ins Risks 2 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000332" Name="Mitigating VSTO Add-ins Risks 3" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000333" Name="Mitigating VSTO Add-ins Risks 3 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+</RuleCollection>
+<RuleCollection Type="Dll" EnforcementMode="AuditOnly">
+    <FilePathRule Id="F25328F9-3B45-430E-9D6A-172505C6A5D1" Name="Block Temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="44757127-2981-40E6-AFDC-005ECF2465B7" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+   <FilePathRule Id="DF6219AD-9521-45B5-8A87-9B0BEBB28FAA" Name="Block Temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="5A7A5618-EA30-4B86-B241-6BB28E4D7D41" Name="Block Temp ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Temp:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="04BDD732-324B-49C8-832A-568A0A7F8675" Name="Block User Downloads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="12B77D6F-12C0-4E05-8CA7-CAF227C3D3B6" Name="Block User Downloads ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\Downloads:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="7DBCB8A1-AB2D-439D-BC77-942A371EE391" Name="Mitigating VSTO Add-ins Risks 1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="78CFE8CF-6581-4A4C-84A3-53DE2EF8C9EA" Name="Mitigating VSTO Add-ins Risks 1 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%LOCALAPPDATA%\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="FC417772-52B6-4EC9-8BA9-A7BA5AD0989A" Name="Mitigating VSTO Add-ins Risks 2" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="EA0CE793-42EA-476D-9DA6-21EC74FB8446" Name="Mitigating VSTO Add-ins Risks 2 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\assembly:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="56E9A8C7-798A-4176-928F-CB4E5EAB73FE" Name="Mitigating VSTO Add-ins Risks 3" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0\" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="CD287C5D-096F-44C9-8A28-A1827F46ACFA" Name="Mitigating VSTO Add-ins Risks 3 ads" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%USERPROFILE%\AppData\Local\Apps\2.0:*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="DC73F2C9-4C6C-4695-8EB1-9E1AB082477F" Name="Block lxssmanager.dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\lxssmanager.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000103" Name="Block Microsoft.Build.dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\Microsoft.Build.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000106" Name="Block msbuild.dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\msbuild.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="7863E71F-0628-41E1-9AF5-1DEDFF8DB85E" Name="Block system.management.automation.dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\system.management.automation.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="57DD1476-1B55-4D15-ABCF-F444D1902693" Name="Block .dll in temp" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%TEMP%\*.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="18C8E3F7-98DA-483D-BAFE-AA6F2270F4BD" Name="Block webclnt.dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*\webclnt.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="77317E3F-D6ED-4092-A9BF-205CAB3ABC89" Name="Block .dll in appdata" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%APPDATA%\*.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000132" Name="Block .dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Users\*\AppData\Local\Temp\*.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="6EDC7C33-F91B-4A15-B9C0-76A01824EFC3" Name="Block .dll in ProgramData" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\ProgramData\*.dll" />
+      </Conditions>
+    </FilePathRule>
+    <FilePublisherRule Id="0ecf0610-2959-4f9a-961c-8291df2affb9" Name="ADVPACK.DLL" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="INTERNET EXPLORER" BinaryName="ADVPACK.DLL">
+          <BinaryVersionRange LowSection="11.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="11f7ec49-ebc9-4b04-aac9-aa72968713e0" Name="URL.DLL" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="INTERNET EXPLORER" BinaryName="URL.DLL">
+          <BinaryVersionRange LowSection="11.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="12b031cf-3ef1-4317-909f-c92a5eae6525" Name="ADVPACK.DLL, version 11.0.0.0 and above, in INTERNET EXPLORER" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="INTERNET EXPLORER" BinaryName="ADVPACK.DLL">
+          <BinaryVersionRange LowSection="11.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="19a50e53-de73-4f85-a391-719ef524c78f" Name="ADVPACK.DLL, version 11.0.0.0 and above, in INTERNET EXPLORER" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="INTERNET EXPLORER" BinaryName="ADVPACK.DLL">
+          <BinaryVersionRange LowSection="11.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="22a1eb1e-db70-44f1-aa76-918cf3246fdd" Name="url.dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="INTERNET EXPLORER" BinaryName="URL.DLL">
+          <BinaryVersionRange LowSection="11.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="24666e38-d943-42eb-bb87-1f75fa758004" Name="ZIPFLDR.DLL" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="ZIPFLDR.DLL">
+          <BinaryVersionRange LowSection="10.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="3009e960-e1c7-4e4c-9453-a4191b46f378" Name="advpack.dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="INTERNET EXPLORER" BinaryName="ADVPACK.DLL">
+          <BinaryVersionRange LowSection="11.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="78f2dac7-8ded-45d7-9832-a7f0a7087dec" Name="SHDOCVW.DLL" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="SHDOCVW.DLL">
+          <BinaryVersionRange LowSection="10.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="936993b9-6b2a-4ace-90b5-c15fe6f9758b" Name="IEFRAME.DLL" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="INTERNET EXPLORER" BinaryName="IEFRAME.DLL">
+          <BinaryVersionRange LowSection="11.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="9c57b321-48fa-4d9d-abfb-6fdce41607d0" Name="ZIPFLDR.DLL, version 10.0.0.0 and above" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="ZIPFLDR.DLL">
+          <BinaryVersionRange LowSection="10.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="a601c77d-94bf-4eb7-a661-136f2d03abcd" Name="IEFRAME.DLL, version 11.0.0.0 and above" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="INTERNET EXPLORER" BinaryName="IEFRAME.DLL">
+          <BinaryVersionRange LowSection="11.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="e1835b95-3c5e-476f-a303-17b7caba80e7" Name="shdocvw.dll" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="SHDOCVW.DLL">
+          <BinaryVersionRange LowSection="10.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="ee6a4d6d-a193-4d68-9816-656abd47395a" Name="SYSTEM.MANAGEMENT.AUTOMATION.DLL, in MICROSOFT (R) WINDOWS (R) OPERATING SYSTEM, from O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT (R) WINDOWS (R) OPERATING SYSTEM" BinaryName="SYSTEM.MANAGEMENT.AUTOMATION.DLL">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+</RuleCollection>
+</AppLockerPolicy>

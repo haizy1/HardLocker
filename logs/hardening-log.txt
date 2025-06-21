@@ -1,0 +1,25 @@
+[2025-05-22 19:03:14] Backed up current policy to backup\applocker-backup-20250522-190314.xml
+[2025-05-22 19:06:18] Backed up current policy to backup\applocker-backup-20250522-190618.xml
+[2025-05-22 19:13:54] Backed up current policy to backup\applocker-backup-20250522-191354.xml
+[2025-05-22 19:14:20] Backed up current policy to backup\applocker-backup-20250522-191419.xml
+[2025-05-22 19:16:06] Backed up current policy to backup\applocker-backup-20250522-191605.xml
+[2025-05-22 19:19:06] Backed up current policy to backup\applocker-backup-20250522-191905.xml
+[2025-05-22 19:20:47] Backed up current policy to backup\applocker-backup-20250522-192046.xml
+[2025-05-22 19:24:11] Backed up current policy to backup\applocker-backup-20250522-192411.xml
+[2025-05-24 16:52:05] Backed up current policy to backup\applocker-backup-20250524-165204.xml
+[2025-05-24 16:52:05] Error applying Basic profile: The XML policy is invalid for the following reason: The 'EnforcementMode' attribute is invalid - The value 'Enforced' is invalid according to its datatype 'EnforcementModeType' - The Enumeration constraint failed.
+[2025-05-24 16:54:55] Backed up current policy to backup\applocker-backup-20250524-165455.xml
+[2025-05-24 16:54:57] Applied Basic profile with Enabled enforcement mode from Applocker-Profiles\Basic.xml
+[2025-05-24 16:55:56] Backed up current policy to backup\applocker-backup-20250524-165556.xml
+[2025-05-24 16:55:57] Applied Basic profile with AuditOnly enforcement mode from Applocker-Profiles\Basic.xml
+[2025-05-24 16:56:14] Backed up current policy to backup\applocker-backup-20250524-165614.xml
+[2025-05-24 16:56:15] Applied Hardened profile with Enabled enforcement mode from Applocker-Profiles\Hardened.xml
+[2025-05-24 16:56:33] Backed up current policy to backup\applocker-backup-20250524-165633.xml
+[2025-05-24 16:56:35] Applied Hardened profile with AuditOnly enforcement mode from Applocker-Profiles\Hardened.xml
+[2025-06-11 19:50:30] Backed up current policy to backup\applocker-backup-20250611-195030.xml
+[2025-06-11 19:55:57] Backed up current policy to backup\applocker-backup-20250611-195557.xml
+[2025-06-11 19:59:20] Backed up current policy to backup\applocker-backup-20250611-195920.xml
+[2025-06-11 20:00:38] Starting to apply selected rules...
+[2025-06-11 20:03:26] Policy exported to GeneratedPolicies\current-policy-20250611-200326.xml
+[2025-06-11 20:04:32] Restored policy from applocker-backup-20250611-195557.xml
+[2025-06-11 21:10:25] Policy exported to GeneratedPolicies\current-policy-20250611-211025.xml

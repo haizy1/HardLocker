@@ -1,0 +1,19 @@
+    <!-- Block Reflective PE Injection  -->
+    <!-- Rule7 : script -->
+    <FilePathRule Id="00000000-0000-0000-0000-000000000247" Name="*PEInjection*.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="*PEInjection*.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="00000000-0000-0000-0000-000000000248" Name="*Reflective*.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="*Reflective*.ps1" />
+      </Conditions>
+    </FilePathRule>
+    <FileHashRule Id="00000000-0000-0000-0000-000000000256" Name="Invoke-ReflectivePEInjection.ps1" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0xF3C0288998194F41986572E0C0CE9724AE29B45165F01887AE825B45A9880CE3" SourceFileName="Invoke-ReflectivePEInjection.ps1" SourceFileLength="151863" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
