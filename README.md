@@ -4,7 +4,7 @@ The project focuses on evaluating the security limitations of AppLocker, a nativ
 ### General Context 
 Application whitelisting is a key layer in endpoint protection strategies, particularly in Windows environments. AppLocker, Microsoft’s native application control feature, allows administrators to define policies that restrict the execution of unauthorized files based on parameters such as path, publisher, or file hash. Despite its potential, AppLocker is not immune to bypasses. Over the years, multiple bypass techniques have been discovered, often leveraging LOLBAS, misconfigured permissions, writable directories, PowerShell abuse, or alternate data streams. These methods highlight gaps in default configurations and expose how AppLocker can be circumvented by adversaries.
 This project focuses on analyzing these bypasses in depth and developing remediation rules to block them. The ultimate objective is to enhance AppLocker’s effectiveness by
-implementing custom hardened policies, and to support this process through the creation of an automated PowerShell-based tool capable of scanning, applying, and reverting AppLocker configurations.
+implementing custom hardened policies, and to support this process through the creation of an automated PowerShell-based tool capable of scanning, applying, and reverting AppLocker configurations.
 ### Problem Statement
 Default AppLocker policies often leave gaps that can be exploited by attackers. Many organizations deploy AppLocker without adapting it to the evolving threat landscape or
 known bypass vectors. As a result, security is often overestimated, and attackers can still achieve code execution using well-documented techniques.
@@ -22,9 +22,9 @@ AppLocker configuration process.
 
 ### Existing Solutions
 Several open-source tools are available to assist with AppLocker configuration and deployment, but most remain limited in scope. AaronLocker provides policy templates and
-scripts to guide rule creation, but it lacks flexibility and does not adapt to specific attack scenarios. Applocker-Hardening automates the application of static policies, without offering any real analysis or bypass detection. AppLockerGen focuses on generating XML rules through a user-friendly interface but offers no support for hardening or automation. The following table provides a benchmark comparison of the existing tools based on their ability to manage, harden, and automate AppLocker configurations.
+scripts to guide rule creation, but it lacks flexibility and does not adapt to specific attack scenarios. Applocker-Hardening automates the application of static policies, without offering any real analysis or bypass detection. AppLockerGen focuses on generating XML rules through a user-friendly interface but offers no support for hardening or automation. The following table provides a benchmark comparison of the existing tools based on their ability to manage, harden, and automate AppLocker configurations.
 <p align="center">
-  <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
+  <img width="400" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
 </p>
 These solutions are helpful in certain contexts, but none offer a complete framework that automates detection, hardening, rollback, and customized policy application in response to real-world AppLocker bypasses. This project aims to fill that gap by providing a tool that brings all these capabilities together in a single, adaptable solution.
 
@@ -33,19 +33,19 @@ These solutions are helpful in certain contexts, but none offer a complete frame
 Living Off The Land Binaries, Scripts and Libraries refer to legitimate, pre-installed Windows utilities that can be repurposed by attackers to execute malicious payloads while avoiding detection. Since these tools are signed by Microsoft and often whitelisted by default, they provide an effective method for bypassing application control mechanisms such as AppLocker. Attackers frequently exploit binaries like mshta.exe, msbuild.exe, regsvr32.exe, and cmstp.exe to run unauthorized code without triggering security alerts. This technique allows adversaries to operate covertly using trusted system components.
 I've tested InstallUtil.exe and MSBuild.exe to reproduce them. I invite you to read those two files, as they explain the steps in detail.
 #### Writable Paths and Misconfiguration :
-AppLocker enforces policies based on file locations, but its effectiveness can be undermined by improper directory permissions. Many paths, including %TEMP%, %APPDATA%,
-and C:\Windows\Tasks\, are writable by non-privileged users. Attackers take advantage of these directories to drop and execute malicious files within otherwise trusted
+AppLocker enforces policies based on file locations, but its effectiveness can be undermined by improper directory permissions. Many paths, including %TEMP%, %APPDATA%,
+and C:\Windows\Tasks\, are writable by non-privileged users. Attackers take advantage of these directories to drop and execute malicious files within otherwise trusted
 locations. Without additional rules to explicitly block execution from these paths, even well-configured AppLocker environments can be bypassed. Securing these locations is
 therefore a critical step in mitigating exploitation risks.
 #### Alternate Data Streams (ADS) :
 Alternate Data Streams (ADS) are a feature of the NTFS file system that allows data
-to be stored in a hidden stream attached to a file. Attackers exploit ADS to hide malicious executables within seemingly innocuous files, allowing execution that can evade
+to be stored in a hidden stream attached to a file. Attackers exploit ADS to hide malicious executables within seemingly innocuous files, allowing execution that can evade
 AppLocker’s default rules. For instance, a payload might be written to file.txt:evil.exe and executed without being directly visible in file explorers. Since AppLocker does not natively inspect ADS, specific path rules must be configured to block these hidden streams effectively.
 #### PowerShell v2 and Script Execution :
 PowerShell Version 2 presents a significant security risk in modern environments due to its lack of support for key protections such as Constrained Language Mode and advanced
 logging features. Attackers often target systems where PowerShell v2 is enabled, using it to execute malicious scripts without triggering AppLocker restrictions. Because AppLocker cannot effectively control script execution in this legacy version, organizations are advised to disable PowerShell v2 entirely and enforce script execution rules on modern versions with signed code requirements.
 #### Reflective PE Injection (Fileless Execution) :
-Reflective PE Injection is a technique used to load and execute portable executable (PE) files directly in memory without writing them to disk. This approach allows attackers to completely bypass AppLocker, which monitors disk-based execution. Tools like PowerSploit’s Invoke-ReflectivePEInjection script enable adversaries to store malicious binaries in memory and invoke them programmatically, leaving no artifacts behind. Since this method avoids traditional file-based triggers, it represents a powerful bypass against AppLocker and traditional antivirus mechanisms.
+Reflective PE Injection is a technique used to load and execute portable executable (PE) files directly in memory without writing them to disk. This approach allows attackers to completely bypass AppLocker, which monitors disk-based execution. Tools like PowerSploit’s Invoke-ReflectivePEInjection script enable adversaries to store malicious binaries in memory and invoke them programmatically, leaving no artifacts behind. Since this method avoids traditional file-based triggers, it represents a powerful bypass against AppLocker and traditional antivirus mechanisms.
 #### Office Add-ins and VSTO Exploitation :
 Attackers can exploit Visual Studio Tools for Office (VSTO) add-ins to execute malicious code when opening applications like Word or Excel. These add-ins can run without
 administrator privileges and are not blocked by AppLocker by default. This makes them a stealthy method for persistence and code execution within trusted programs.
@@ -93,7 +93,7 @@ refreshes the AppLocker interface, and redirects the user to the main menu to co
   <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
 </p>
 
-• **Hardened** : Provides stronger protection, targeting more aggressive attack techniques. It is suitable for sensitive environments where maximum security is required. Applied the same way as the basic profile.
+• **Hardened** : Provides stronger protection, targeting more aggressive attack techniques. It is suitable for sensitive environments where maximum security is required. Applied the same way as the basic profile.
 • **Custom** : Allows the user to select specific rules manually. This profile is ideal for experienced users who know their environment and want more control.
 
 <p align="center">
@@ -129,13 +129,13 @@ the policy in XML format.
 <p align="center">
   <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
 </p>
-The exported file can be saved for backup, shared with other systems, or reviewed manually. This feature is useful for documentation, auditing, or reapplying policies in the future.
+The exported file can be saved for backup, shared with other systems, or reviewed manually. This feature is useful for documentation, auditing, or reapplying policies in the future.
 <p align="center">
   <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
 </p>
 
 ##### Rollback Feature :
-To avoid accidental misconfigurations, the tool automatically saves a backup of the current AppLocker policy before applying any changes. This backup can be restored later
+To avoid accidental misconfigurations, the tool automatically saves a backup of the current AppLocker policy before applying any changes. This backup can be restored later
 using the rollback function.
 <p align="center">
   <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
@@ -161,7 +161,7 @@ The Windows Event Viewer showed that the binary InstallUtil.exe was prevented fr
 
 
 **System Notification** :
-A system-level popup confirmed that the application was blocked by the system administrator, reinforcing that the rule was correctly enforced.
+A system-level popup confirmed that the application was blocked by the system administrator, reinforcing that the rule was correctly enforced.
 <p align="center">
   <img width="375" height="258" src="images/Capture d'écran 2025-06-21 154438.png">
 </p>
