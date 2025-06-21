@@ -32,6 +32,7 @@ These solutions are helpful in certain contexts, but none offer a complete frame
 <p align="center">
   <img width="450" height="258" src="images/Capture d'écran 2025-06-22 010136.png">
 </p>
+
 #### LOLBAS Abuse :
 Living Off The Land Binaries, Scripts and Libraries refer to legitimate, pre-installed Windows utilities that can be repurposed by attackers to execute malicious payloads while avoiding detection. Since these tools are signed by Microsoft and often whitelisted by default, they provide an effective method for bypassing application control mechanisms such as AppLocker. Attackers frequently exploit binaries like mshta.exe, msbuild.exe, regsvr32.exe, and cmstp.exe to run unauthorized code without triggering security alerts. This technique allows adversaries to operate covertly using trusted system components.
 I've tested [**InstallUtil.exe**](InstallUtil.exe.pdf) and [**MSBuild.exe**](Msbuild.exe.pdf) to reproduce them. I invite you to read those two files, as they explain the steps in detail. 
